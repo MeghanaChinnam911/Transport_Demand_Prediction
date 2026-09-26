@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, sans-serif;
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-navy-950 text-slate-100 antialiased min-h-screen selection:bg-cyan-500 selection:text-black;
+  }
+}
+
+/* Custom Glassmorphism Card Style */
+.glass-panel {
+  @apply bg-navy-900/80 backdrop-blur-xl border border-slate-800/80 rounded-2xl shadow-xl transition-all duration-300;
+}
+
+.glass-panel-interactive {
+  @apply glass-panel hover:border-cyan-500/40 hover:shadow-cyan-500/10 hover:translate-y-[-2px];
+}
+
+.glow-effect {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+}
+
+.glow-border {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070A11;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+}
